@@ -1,7 +1,12 @@
 package com.graclyxz.kotomare
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.Menu
+import android.webkit.WebChromeClient
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import androidx.activity.OnBackPressedCallback
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -12,6 +17,8 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.graclyxz.kotomare.databinding.ActivityMainBinding
+import com.graclyxz.kotomare.databinding.FragmentHomeBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         setSupportActionBar(binding.appBarMain.toolbar)
@@ -43,6 +51,7 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
 
     }
 

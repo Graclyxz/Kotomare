@@ -3,6 +3,8 @@
 .gradle
 .idea
 
+local.properties
+
 # Log file
 *.log
 
